@@ -135,3 +135,4 @@ export FFF_FAV1="${HOME}"
 export FFF_FAV2="${HOME}/Desktop/playground"
 export FFF_FAV3="${HOME}/.bashrc"
 export FFF_FAV4="${HOME}/projects"
+export FFF_COL2=6
