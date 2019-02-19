@@ -31,3 +31,6 @@ alias msf=msfconsole
 alias empire='/home/rein/Empire/empire'
 
 alias rc="${EDITOR} ${HOME}/.bashrc"
+
+#Run an express server with cwd as static directory
+alias iwash="node ${HOME}/projects/webserver/server.js $(pwd)"
