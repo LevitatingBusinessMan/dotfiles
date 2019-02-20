@@ -33,4 +33,7 @@ alias empire='/home/rein/Empire/empire'
 alias rc="${EDITOR} ${HOME}/.bashrc"
 
 #Run an express server with cwd as static directory
-alias iwash="node ${HOME}/projects/webserver/server.js $(pwd)"
+alias iwash="node ${HOME}/projects/webserver/iwash.js"
+
+#Run an express server which always response with the commands arguments
+alias express="node ${HOME}/projects/webserver/express.js"
