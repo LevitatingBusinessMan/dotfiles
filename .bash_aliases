@@ -20,7 +20,7 @@ alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 #list all commands
-alias list='ls /bin /usr/sbin /usr/local/bin /usr/bin ~/.local/bin | sort | uniq'
+alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
 
 #alias sloris='node ~/projects/slow_loris' (symlinked)
 
