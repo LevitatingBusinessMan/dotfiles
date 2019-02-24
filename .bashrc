@@ -21,12 +21,10 @@ export EDITOR="micro"
 #fff customization
 export FFF_OPENER="less"
 export FFF_FAV1="${HOME}"
-export FFF_FAV2="${HOME}/playground"
-export FFF_FAV3="${HOME}/.bashrc"
-export FFF_FAV4="${HOME}/.bash_aliases"
+export FFF_FAV2="${HOME}/.bashrc"
+export FFF_FAV3="${HOME}/.bash_aliases"
+export FFF_FAV4="${HOME}/projects"
 export FFF_FAV5="/tmp"
-export FFF_FAV6="${HOME}/projects"
-export FFF_FAV9="${HOME}/fff-cheatsheet"
 export FFF_COL2=6
 
 export NVM_DIR="$HOME/.nvm"
