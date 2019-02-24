@@ -9,7 +9,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PS1='\033[01;32m\u \033[34m\w\033[5m\033[91m ❤ \033[25m\033[39m'
+PS1='\033[01;32m\u \033[34m\w \033[39m'
 
 f() {
     fff "$@"
@@ -24,5 +24,11 @@ export FFF_FAV1="${HOME}"
 export FFF_FAV2="${HOME}/playground"
 export FFF_FAV3="${HOME}/.bashrc"
 export FFF_FAV4="${HOME}/.bash_aliases"
-export FFF_FAV5="${HOME}/projects"
+export FFF_FAV5="/tmp"
+export FFF_FAV6="${HOME}/projects"
+export FFF_FAV9="${HOME}/fff-cheatsheet"
 export FFF_COL2=6
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
