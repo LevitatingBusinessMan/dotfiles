@@ -1,0 +1,3 @@
+#!/bin/sh
+echo
+figlet -f "ANSI Shadow" "$(hostname)"
