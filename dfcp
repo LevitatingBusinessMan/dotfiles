@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#Customizable variables: DF_DIRECTORY, DOT_FILES
+
+#Set DF_DIRECTORY if unset
+if [ -z "$DF_DIRECTORY" ]
+then
+        DF_DIRECTORY="${HOME}/Dot_Files"
+fi
+
+echo "DF_DIRECTORY: $DF_DIRECTORY"
+
+#Create directory if not existing
+if [ ! -e "$DF_DIRECTORY" ]
+then
+        echo "$DF_DIRECTORY doesn't exist"
+        echo "Creating Dot_Files folder at $DF_DIRECTORY"
+        mkdir ${DF_DIRECTORY}
+fi
+
+#Set the dotfiles to copy to default if unset
+if [ -z "$DOT_FILES" ]
+then
+        DOT_FILES=("${HOME}/.bashrc" "${HOME}/.bash_aliases")
+
+#Turn predefined dotfiles into array
+else
+        buIFS=$IFS
+
+        IFS=":"
+        read -a array <<< $DOT_FILES
+        DOT_FILES=("${array[@]}")
+
+        echo ${DOT_FILES[@]}
+        
+        IFS=$buIFS
+fi
+
+#Copy all files
+for i in "${DOT_FILES[@]}"
+do
+        if [ -e "$i" ]
+        then
+                echo "Copying $i"
+                cp $i "${DF_DIRECTORY}/$(basename $i)"
+        else
+                echo "$i doesn't exist"
+        fi
+done
