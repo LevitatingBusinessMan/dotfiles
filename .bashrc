@@ -9,7 +9,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PS1='\[\033[01;32m\]\u \[\033[34m\]\w \[\033[39m\]'
+PS1='\[\033[01;36m\]\u \[\033[34m\]\w \[\033[39m\]'
 
 f() {
     fff "$@"
@@ -31,5 +31,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=~/bin:$PATH
-export PATH=$PATH:~/.local/bin
+#For dfcp
+export DOT_FILES="$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3/config"

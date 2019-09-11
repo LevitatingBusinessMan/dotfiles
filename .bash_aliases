@@ -14,3 +14,13 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
 
 alias rc="${EDITOR} ${HOME}/.bashrc"
+
+alias wttr='curl v2.wttr.in'
+
+alias solve='node ~/projects/solver'
+
+alias endsession='pkill -SIGHUP -t'
+
+#qwebservers
+alias iwash='node ~/projects/qwebservers/iwash.js'
+alias express='node ~/projects/qwebservers/express.js'
