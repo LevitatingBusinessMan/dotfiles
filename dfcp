@@ -42,7 +42,7 @@ do
         if [ -e "$i" ]
         then
                 echo "Copying $i"
-                cp $i "${DF_DIRECTORY}/$(basename $i)"
+                cp -r $i "${DF_DIRECTORY}/$(basename $i)"
         else
                 echo "$i doesn't exist"
         fi
