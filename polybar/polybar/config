@@ -59,7 +59,7 @@ click-left = shutdown now
 [module/battery]
 type = internal/battery
 
-full-at = 100
+full-at = 99
 
 battery = BAT0
 adapter = ADP0

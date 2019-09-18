@@ -18,6 +18,9 @@ gaps bottom 5
 gaps horizontal 5
 gaps inner 30
 
+# dunst
+exec_always --no-startup-id /usr/bin/dunst
+
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
