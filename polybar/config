@@ -33,6 +33,7 @@ offset-x = 31
 offset-y = 10
 radius = 6.0
 override-redirect = true
+wm-restack = i3
 padding-right = 5
 module-margin = 2
 
@@ -128,7 +129,6 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 format-underline = #0f0
 
