@@ -2,7 +2,7 @@
 # ~/.bash_aliases
 #
 
-alias grep='grep --color=auto'
+alias grep='grep --color=auto -i'
 alias ls='ls --color=auto'
 
 alias ll='ls -alFh'
@@ -20,3 +20,18 @@ alias rc="${EDITOR} ${HOME}/.bashrc"
 alias wttr='curl v2.wttr.in'
 
 alias endsession='pkill -SIGHUP -t'
+
+#mongodb-compass
+alias compass="mongodb-compass"
+
+alias py="python"
+
+alias copy="xclip -sel c <"
+
+alias msf="msfconsole"
+
+alias osu_area="xsetwacom set \"GAOMON Gaomon Tablet Pen stylus\" area 0 0 10000 10170"
+alias osu_area_undo="xsetwacom set \"GAOMON Gaomon Tablet Pen stylus\" area 0 0 33020 20320"
+
+alias sprunge="curl -F 'sprunge=<-' sprunge.us"
+alias xi="curl -F 'f:1=<-' ix.io"
