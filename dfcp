@@ -47,3 +47,11 @@ do
                 echo "$i doesn't exist"
         fi
 done
+
+echo "Do you wish to push these files to branch $(hostname)"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) cd ${DF_DIRECTORY}; git push origin $(hostname); cd -;;
+        No ) exit;;
+    esac
+done
