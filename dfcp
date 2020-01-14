@@ -30,8 +30,6 @@ else
         IFS=":"
         read -a array <<< $DOT_FILES
         DOT_FILES=("${array[@]}")
-
-        echo ${DOT_FILES[@]}
         
         IFS=$buIFS
 fi
@@ -51,7 +49,7 @@ done
 echo "Do you wish to push these files to branch $(hostname)"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) cd ${DF_DIRECTORY}; git add .; git commit -vm "$(date)"; git push origin $(hostname); cd -; break;;
+        Yes ) cd ${DF_DIRECTORY}; git add . && git commit -m "$(date)" && git push origin $(hostname); cd -; break;;
         No ) exit;;
     esac
 done
