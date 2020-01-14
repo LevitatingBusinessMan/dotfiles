@@ -24,3 +24,13 @@ alias endsession='pkill -SIGHUP -t'
 #qwebservers
 alias iwash='node ~/projects/qwebservers/iwash.js'
 alias express='node ~/projects/qwebservers/express.js'
+
+alias msf="msfconsole"
+
+alias gotop="gotop -b"
+
+alias py="python"
+
+alias calc="${HOME}/calc.bc"
+
+alias irssi="irssi -n levitating"

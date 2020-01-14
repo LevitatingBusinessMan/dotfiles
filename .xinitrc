@@ -18,6 +18,7 @@ exec /usr/bin/i3
 #KDE
 #exec startkde
 
-#MATERIAL_SHELL
+#GNOME
 #export GDK_BACKEND=x11
+#export XDG_SESSION_TYPE=x11
 #exec gnome-shell

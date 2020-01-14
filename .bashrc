@@ -9,7 +9,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PS1='\[\033[01;36m\]\u \[\033[34m\]\w \[\033[39m\]'
+git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+}
+
+PS1="\[\033[1;31m\]\$(git_branch)\[\033[01;36m\]\u \[\033[34m\]\w \[\033[32m\]$\[\033[39m\] "
 
 f() {
     fff "$@"

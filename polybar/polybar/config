@@ -33,6 +33,7 @@ offset-x = 31
 offset-y = 10
 radius = 6.0
 override-redirect = true
+wm-restack = i3
 padding-right = 5
 module-margin = 2b
 
@@ -181,5 +182,5 @@ label-volume = %{T2}%{T-} %percentage%%
 label-volume-foreground = ${colors.foreground}
 label-volume-underline = #00f
 
-label-muted = %{T2}%{T-} muted
+label-muted = %{T2}%{T-}
 label-muted-foreground = #666
