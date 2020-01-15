@@ -32,8 +32,7 @@ exec_always --no-startup-id /usr/bin/dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Feh
-exec --no-startup-id feh --bg-fill ~/Wallpapers/kimi.jpg
-
+# exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/kimi.jpg
 # Compton
 exec --no-startup-id compton --config ~/.config/compton.conf
 
