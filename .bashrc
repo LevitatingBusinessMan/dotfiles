@@ -36,6 +36,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #For dfcp
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/compton.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole"
+export DOT_FILES="$HOME/.config/micro:$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/compton.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole"
 
 STEAMCOMMON="${HOME}/Games/SteamLibrary/steamapps/common"
