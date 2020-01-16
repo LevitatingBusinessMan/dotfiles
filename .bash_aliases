@@ -34,3 +34,8 @@ alias py="python"
 alias calc="${HOME}/calc.bc"
 
 alias irssi="irssi -n levitating"
+
+alias sprunge="curl -F 'sprunge=<-' sprunge.us"
+alias xi="curl -F 'f:1=<-' ix.io"
+
+alias view="micro -readonly on"
