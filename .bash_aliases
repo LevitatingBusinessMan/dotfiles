@@ -26,7 +26,7 @@ alias compass="mongodb-compass"
 
 alias py="python"
 
-alias copy="xclip -sel c <"
+alias copy="xclip -selection clipboard"
 
 alias msf="msfconsole"
 
