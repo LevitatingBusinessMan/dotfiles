@@ -35,3 +35,5 @@ alias osu_area_undo="xsetwacom set \"GAOMON Gaomon Tablet Pen stylus\" area 0 0 
 
 alias sprunge="curl -F 'sprunge=<-' sprunge.us"
 alias xi="curl -F 'f:1=<-' ix.io"
+
+alias view="micro -readonly on"
