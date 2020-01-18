@@ -46,6 +46,7 @@ function onQuit(view)
 
     openCount[path] = openCount[path] - 1
     if openCount[path] == 0 then
+        openCount[path] = nil
         vcs[path] = nil
         showing[path] = nil
     end
