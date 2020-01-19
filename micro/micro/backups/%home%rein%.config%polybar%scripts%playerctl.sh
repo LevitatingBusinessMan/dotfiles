@@ -23,7 +23,7 @@ case $status in
 		;;
 	*)
 		# Only display if there is an active player
-		echo
+		
 		exit 0
 esac
 
