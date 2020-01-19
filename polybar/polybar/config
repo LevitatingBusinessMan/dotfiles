@@ -27,11 +27,11 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/main]
-width = 100%:-62
+width = 100%:-68
 height = 35
 
-# 31 seems to be the outer gap in set i3-gaps
-offset-x = 31
+# 34 seems to be the outer gap in set i3-gaps
+offset-x = 34
 offset-y = 10
 radius = 6.0
 override-redirect = true
@@ -48,7 +48,7 @@ font-0 = NotoSans-Regular:size=12;2
 font-1 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:size=13;2
 
 modules-left = i3
-modules-center =
+modules-center = playerctl
 modules-right = eth pulseaudio memory cpu date poweroff
 
 [module/poweroff]
@@ -56,10 +56,19 @@ type = custom/text
 content = ""
 click-left = shutdown now
 
+[module/playerctl]
+type = custom/script
+label-active-font = 2
+exec = ~/.config/polybar/scripts/playerctl.sh
+interval = 1
+click-left = playerctl play-pause
+click-right = playerctl next
+click-middle = playerctl previous
+
 [module/player-cmus]
 type = custom/script
 exec = ~/.config/polybar/scripts/player-cmus.sh
-interval = 5
+interval = .9
 click-left = cmus-remote -n
 click-right = cmus-remote -r
 click-middle = cmus-remote -u
@@ -69,31 +78,39 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-
+;ws-icon-default = 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
+label-mode-foreground = ${colors.foreground}
+;label-mode-foreground = #e6e6e6
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
+;label-focused = %icon%
+;label-focused-foreground = #99ebff
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= #1ad1ff
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
+;label-unfocused = %icon%
+;label-unfocused-foreground = #e6e6e6
 label-unfocused = %index%
+label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
+;label-visible = %icon%
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
+;label-urgent = %icon%
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
