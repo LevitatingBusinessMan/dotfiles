@@ -1,8 +1,8 @@
 #!/bin/bash
 
-artist=$(playerctl metadata --format "{{ artist }}")
-title=$(playerctl metadata --format "{{ title }}")
-status=$(playerctl status)
+artist=$(playerctl metadata --format "{{ artist }}" 2> /dev/null)
+title=$(playerctl metadata --format "{{ title }}" 2> /dev/null)
+status=$(playerctl status 2> /dev/null)
 #statusSymbol=$(playerctl status --format "{{ emoji(status) }}" 2> /dev/null)
 
 #Check if title includes an artist alreadt
