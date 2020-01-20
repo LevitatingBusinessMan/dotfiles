@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Breeze
-Font=Monospace,11,-1,5,50,0,0,0,0,0
+Font=Hack,11,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=1

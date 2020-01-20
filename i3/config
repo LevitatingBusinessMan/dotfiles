@@ -11,6 +11,10 @@
 
 set $mod Mod4
 
+#Origin crap
+for_window [instance="origin.exe"] floating enable
+for_window [instance="bf1.exe"] floating enable
+
 # Gaps
 for_window [class=".*"] border pixel 0
 gaps top 30
@@ -28,10 +32,15 @@ exec_always --no-startup-id /usr/bin/dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Feh
-exec --no-startup-id feh --bg-fill ~/Wallpapers/kimi.jpg
-
+# exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/kimi.jpg
 # Compton
 exec --no-startup-id compton --config ~/.config/compton.conf
+
+# deepin-screenshot
+bindsym $mod+p exec deepin-screenshotp
+
+# Redshift
+exec --no-startup-id redshift -l 52.27333:5.16111
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
