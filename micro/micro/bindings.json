@@ -1,4 +1,0 @@
-{
-    "Alt-/": "lua:comment.comment",
-    "CtrlN": "vcs.toggle"
-}
