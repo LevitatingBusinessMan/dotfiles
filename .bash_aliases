@@ -4,11 +4,9 @@
 
 alias grep='grep --color=auto -i'
 alias ls='ls --color=auto'
+alias diff='diff --color=auto'
 
 alias ll='ls -alFh'
-
-#from ubuntu
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 #list all commands
 alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
@@ -39,3 +37,6 @@ alias xi="curl -F 'f:1=<-' ix.io"
 alias view="micro -readonly on"
 
 alias lights="node projects/yeelight-cli/index.js"
+
+alias pac_who="pacman -Qo"
+alias pac_list="pacman -Ql"
