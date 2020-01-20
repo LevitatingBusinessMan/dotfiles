@@ -1,5 +1,4 @@
-
-#prob doesnt work because of uncomplete syntax files
+# Prob doesnt work because of uncomplete syntax files
 color-link constant.bool.true "green"
 color-link constant.bool.false "red"
 
@@ -18,7 +17,7 @@ color-link ignore "default"
 color-link error ",brightred"
 
 #prob doesnt work because of uncomplete syntax files
-color-link todo ",brightyellow"
+color-link todo "yellow"
 
 color-link indent-char "black"
 color-link line-number "blue"
@@ -30,5 +29,4 @@ color-link gutter-warning "red"
 color-link color-column "white"
 #No extended types. (bool in C)
 color-link type.extended "default"
-#No bracket highlighting.
 color-link symbol.brackets "blue"
