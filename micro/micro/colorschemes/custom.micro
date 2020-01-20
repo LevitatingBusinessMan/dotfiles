@@ -1,0 +1,32 @@
+# Prob doesnt work because of uncomplete syntax files
+color-link constant.bool.true "green"
+color-link constant.bool.false "red"
+
+color-link constant.string "magenta"
+
+color-link comment "blue"
+color-link constant "green"
+color-link identifier "cyan"
+color-link statement "yellow"
+color-link symbol "yellow"
+color-link preproc.shebang "yellow"
+color-link preproc "magenta"
+color-link type "magenta"
+color-link special "magenta"
+color-link ignore "default"
+color-link error ",brightred"
+
+#prob doesnt work because of uncomplete syntax files
+color-link todo "yellow"
+
+color-link indent-char "black"
+color-link line-number "blue"
+color-link current-line-number "red"
+color-link gutter-error ",red"
+color-link gutter-warning "red"
+#Cursor line causes readability issues. Disabled for now.
+#color-link cursor-line "white,black"
+color-link color-column "white"
+#No extended types. (bool in C)
+color-link type.extended "default"
+color-link symbol.brackets "blue"
