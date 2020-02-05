@@ -132,7 +132,7 @@ label = %{T2}%{T-} %percentage_used%%
 
 [module/eth]
 type = internal/network
-interface = enp9s0
+interface = eth0
 interval = 5
 
 format-connected-underline = #6600cc

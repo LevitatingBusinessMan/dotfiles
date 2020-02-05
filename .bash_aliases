@@ -32,7 +32,7 @@ alias osu_area="xsetwacom set \"GAOMON Gaomon Tablet Pen stylus\" area 0 0 10000
 alias osu_area_undo="xsetwacom set \"GAOMON Gaomon Tablet Pen stylus\" area 0 0 33020 20320"
 
 alias sprunge="curl -F 'sprunge=<-' sprunge.us"
-alias xi="curl -F 'f:1=<-' ix.io"
+alias ix="curl -F 'f:1=<-' ix.io"
 
 alias view="micro -readonly on"
 
@@ -40,3 +40,5 @@ alias lights="node projects/yeelight-cli/index.js"
 
 alias pac_who="pacman -Qo"
 alias pac_list="pacman -Ql"
+
+alias rb="ruby"
