@@ -4,6 +4,7 @@
 
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
+alias diff='diff --color=auto'
 
 alias ll='ls -alFh'
 
@@ -39,3 +40,5 @@ alias sprunge="curl -F 'sprunge=<-' sprunge.us"
 alias xi="curl -F 'f:1=<-' ix.io"
 
 alias view="micro -readonly on"
+
+alias copy="xclip -selection clipboard"
