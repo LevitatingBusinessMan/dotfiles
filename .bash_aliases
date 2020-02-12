@@ -42,3 +42,7 @@ alias pac_who="pacman -Qo"
 alias pac_list="pacman -Ql"
 
 alias rb="ruby"
+
+alias tunnel="sudo killall openvpn; sudo -b openvpn ~/Levitating.ovpn &> /dev/null"
+
+alias du="du -h"
