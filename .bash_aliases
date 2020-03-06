@@ -42,3 +42,5 @@ alias xi="curl -F 'f:1=<-' ix.io"
 alias view="micro -readonly on"
 
 alias copy="xclip -selection clipboard"
+
+alias light="sudo light"
