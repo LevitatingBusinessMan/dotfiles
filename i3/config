@@ -16,7 +16,7 @@ for_window [instance="origin.exe"] floating enable
 for_window [instance="bf1.exe"] floating enable
 
 # Gaps
-#for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 0
 gaps top 30
 gaps bottom 5
 gaps horizontal 5
