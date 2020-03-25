@@ -46,3 +46,5 @@ alias rb="ruby"
 alias tunnel="sudo killall openvpn; sudo -b openvpn ~/Levitating.ovpn &> /dev/null"
 
 alias du="du -h"
+
+alias upscale="waifu2x -model_dir /usr/share/waifu2x/models/photo -m scale -i"
