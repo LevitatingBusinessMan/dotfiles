@@ -7,6 +7,7 @@ alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 
 alias ll='ls -alFh'
+alias lt='ls -t'
 
 #list all commands
 alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
