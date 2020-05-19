@@ -49,3 +49,7 @@ alias tunnel="sudo killall openvpn; sudo -b openvpn ~/Levitating.ovpn &> /dev/nu
 alias du="du -h"
 
 alias upscale="waifu2x -model_dir /usr/share/waifu2x/models/photo -m scale -i"
+
+alias catbin="nc catbin.xyz 5454 <"
+
+alias srcinfo="makepkg --printsrcinfo > .SRCINFO"

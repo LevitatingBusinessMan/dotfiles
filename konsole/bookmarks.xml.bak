@@ -377,12 +377,4 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/rein">
-  <title>rein</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name=""/>
-   </metadata>
-  </info>
- </bookmark>
 </xbel>
