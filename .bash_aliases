@@ -53,3 +53,9 @@ alias upscale="waifu2x -model_dir /usr/share/waifu2x/models/photo -m scale -i"
 alias catbin="nc catbin.xyz 5454 <"
 
 alias srcinfo="makepkg --printsrcinfo > .SRCINFO"
+
+alias yay="yay --removemake"
+
+alias make="make -j3"
+
+alias my_ip="curl https://api.ipify.org"

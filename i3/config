@@ -15,13 +15,15 @@ set $mod Mod4
 for_window [instance="origin.exe"] floating enable
 for_window [instance="bf1.exe"] floating enable
 
+# GooseDesktop!
+#for_window [instance="GooseDesktop.ex"] floating enable
 
 # Gaps
 for_window [class=".*"] border pixel 0
 gaps top 30
-gaps bottom 5
-gaps horizontal 5
-gaps inner 30
+gaps bottom 3
+gaps horizontal 3
+gaps inner 20
 
 # Rounded corners
 border_radius 5

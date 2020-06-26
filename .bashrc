@@ -55,3 +55,5 @@ export LESS="--RAW-CONTROL-CHARS"
 
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
+
+PATH="${HOME}/.local/bin:$PATH"
