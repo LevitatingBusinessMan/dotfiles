@@ -33,7 +33,7 @@ export FFF_FAV5="/tmp"
 export FFF_COL2=6
 
 #For dfcp
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/compton.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/compton.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf"
 
 STEAMCOMMON="${HOME}/Games/SteamLibrary/steamapps/common"
 
@@ -56,4 +56,4 @@ export LESS="--RAW-CONTROL-CHARS"
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
 
-PATH="${HOME}/.local/bin:$PATH"
+PATH="${HOME}/.local/bin:/home/rein/.cargo/bin:$PATH"

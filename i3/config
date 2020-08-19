@@ -18,15 +18,18 @@ for_window [instance="bf1.exe"] floating enable
 # GooseDesktop!
 #for_window [instance="GooseDesktop.ex"] floating enable
 
+for_window [instance="FaceTrackNoIR.exe"] floating enable
+
+
 # Gaps
 for_window [class=".*"] border pixel 0
-gaps top 30
+gaps top 43
 gaps bottom 3
-gaps horizontal 3
-gaps inner 20
+gaps horizontal 12
+gaps inner 15
 
 # Rounded corners
-border_radius 5
+#border_radius 5
 
 # Dunst
 exec_always --no-startup-id /usr/bin/dunst
@@ -44,6 +47,9 @@ bindsym $mod+p exec imgur-screenshot
 
 # Redshift
 exec --no-startup-id redshift -l 52.27333:5.16111
+
+# Polkit agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -71,7 +77,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill

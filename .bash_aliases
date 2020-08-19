@@ -8,6 +8,7 @@ alias diff='diff --color=auto'
 
 alias ll='ls -alFh'
 alias lt='ls -t'
+alias lr='ls -LR'
 
 #list all commands
 alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
@@ -59,3 +60,5 @@ alias yay="yay --removemake"
 alias make="make -j3"
 
 alias my_ip="curl https://api.ipify.org"
+
+alias proxy_tor="proxychains -q -f /etc/proxychains_tor.conf"
