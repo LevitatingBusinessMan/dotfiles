@@ -11,13 +11,16 @@ UseCustomCursorColor=true
 Command=/bin/bash
 Name=Main
 Parent=FALLBACK/
-TerminalMargin=30
+ShowTerminalSizeHint=true
+TerminalMargin=20
 
 [Keyboard]
 KeyBindings=default
 
 [Scrolling]
-ScrollBarPosition=2
+HighlightScrolledLines=false
+HistorySize=2000
+ScrollBarPosition=1
 
 [Terminal Features]
 BlinkingCursorEnabled=true

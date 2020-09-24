@@ -37,12 +37,6 @@ export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.x
 
 STEAMCOMMON="${HOME}/Games/SteamLibrary/steamapps/common"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 #GPG
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
@@ -56,4 +50,4 @@ export LESS="--RAW-CONTROL-CHARS"
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
 
-PATH="${HOME}/.local/bin:/home/rein/.cargo/bin:$PATH"
+PATH="${HOME}/.local/bin:/home/rein/.cargo/bin:/home/rein/.gem/ruby/2.7.0/bin:$PATH"
