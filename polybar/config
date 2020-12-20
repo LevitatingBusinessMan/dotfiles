@@ -46,15 +46,25 @@ line-size = 2
 
 font-0 = NotoSans-Regular:size=12;2
 font-1 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:size=13;2
+font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-left = i3
 modules-center = playerctl
-modules-right = eth pulseaudio memory cpu date poweroff
+modules-right = eth pulseaudio lights memory cpu date poweroff
 
 [module/poweroff]
 type = custom/text
 content = ""
 click-left = shutdown now
+
+[module/lights]
+type = custom/script
+interval = 5
+;content = "%{T3}"
+click-left = "node projects/yeelight-cli/index.js toggle"
+format-underline = #fcad03
+exec = ~/.config/polybar/scripts/lights.sh
+
 
 [module/playerctl]
 type = custom/script
