@@ -21,7 +21,7 @@ f() {
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
 
-export EDITOR="micro"
+export EDITOR="/usr/bin/micro"
 
 #fff customization
 export FFF_OPENER="less"
@@ -33,7 +33,7 @@ export FFF_FAV5="/tmp"
 export FFF_COL2=6
 
 #For dfcp
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/compton.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/compton.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf:$HOME/config_tablet.sh"
 
 STEAMCOMMON="${HOME}/Games/SteamLibrary/steamapps/common"
 
