@@ -72,3 +72,9 @@ alias d_dirsearch='dirsearch -e php,txt,html -t 30 -F --plain-text-report=dirsea
 alias nmap="sudo nmap"
 
 alias reptile-client="sudo ~/Reptile/output/client"
+
+alias bashtop="bpytop"
+
+alias less="less -r"
+
+alias bc="bc -l"
