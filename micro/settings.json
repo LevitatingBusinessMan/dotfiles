@@ -8,6 +8,10 @@
     "filemanager-openonstart": false,
     "filemanager-showdotfiles": true,
     "filemanager-showignored": true,
+    "ft:unknown": {
+        "ruler": false,
+        "softwrap": true
+    },
     "hidehelp": false,
     "matchbrace": false,
     "matchbraceleft": false,
