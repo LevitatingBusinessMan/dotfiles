@@ -15,11 +15,8 @@ set $mod Mod4
 for_window [instance="origin.exe"] floating enable
 for_window [instance="bf1.exe"] floating enable
 
-# GooseDesktop!
-#for_window [instance="GooseDesktop.ex"] floating enable
-
-for_window [instance="FaceTrackNoIR.exe"] floating enable
-
+#Flameshot
+bindsym Print exec --no-startup-id flameshot gui
 
 # Gaps
 for_window [class=".*"] border pixel 0
