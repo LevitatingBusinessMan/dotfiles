@@ -2,5 +2,7 @@
     "Alt-/": "lua:comment.comment",
     "CtrlP": "command:vsplit",
     "Ctrl-;": "command:hsplit",
-    "CtrlUnderscore": "lua:comment.comment"
+    "CtrlUnderscore": "lua:comment.comment",
+    "Shift-PageUp": "SelectPageUp",
+    "Shift-PageDown": "SelectPageDown"
 }
