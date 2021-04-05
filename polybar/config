@@ -167,7 +167,7 @@ label = %{T2}%{T-} %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-label-volume = %{T2}%{T-} %percentage%%
+label-volume = "%{A2:pavucontrol:}%{T2}%{T-} %percentage%%%{A}"
 label-volume-foreground = ${colors.foreground}
 label-volume-underline = #00f
 

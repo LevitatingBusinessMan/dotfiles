@@ -32,13 +32,13 @@ gaps inner 15
 exec --no-startup-id systemctl --user start dunst
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id systemctl --user start polybar
 
 # Feh
 # exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/kimi.jpg
 
 # Compton
-exec --no-startup-id systemctl --user start picom
+exec_always --no-startup-id systemctl --user start picom
 
 # deepin-screenshot
 bindsym $mod+p exec imgur-screenshot

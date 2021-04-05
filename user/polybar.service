@@ -1,0 +1,5 @@
+[Unit]
+Description=Polybar
+
+[Service]
+ExecStart=/usr/bin/polybar main

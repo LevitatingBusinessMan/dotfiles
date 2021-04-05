@@ -3,4 +3,3 @@ Description=Picom
 
 [Service]
 ExecStart=/usr/bin/picom --config "${HOME}/.config/picom.conf"
-Restart=always
