@@ -1,0 +1,6 @@
+[Unit]
+Description=Dunst notification manager
+
+[Service]
+ExecStart=/usr/bin/dunst
+Restart=always

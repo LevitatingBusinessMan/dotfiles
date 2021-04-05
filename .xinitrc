@@ -39,7 +39,8 @@ xset -dpms
 xset s noblank
 
 #start udiskie
-udiskie &
+#should be handled by systemd now
+#udiskie &
 
 #Gaomon tablet
 ~/config_tablet.sh

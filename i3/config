@@ -29,21 +29,23 @@ gaps inner 15
 #border_radius 5
 
 # Dunst
-exec_always --no-startup-id /usr/bin/dunst
+exec --no-startup-id systemctl --user start dunst
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Feh
 # exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/kimi.jpg
+
 # Compton
-exec --no-startup-id picom --config ~/.config/picom.conf
+exec --no-startup-id systemctl --user start picom
 
 # deepin-screenshot
 bindsym $mod+p exec imgur-screenshot
 
 # Redshift
-exec --no-startup-id redshift -l 52.27333:5.16111
+#This is handled by systemd now
+#exec--no-startup-id systemctl --user start redshift
 
 # Polkit agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -65,10 +67,10 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && ~/dunst_volume.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ~/dunst_volume.sh
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ~/dunst_volume.sh
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && ~/dunst_volume.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

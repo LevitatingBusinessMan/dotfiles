@@ -5,7 +5,7 @@ DETAILS=$(git show -s --format="%an %s (%h)")
 
 HASH=$(git rev-parse HEAD)
 REMOTE=$(git config --get remote.origin.url)
-AUTHOR=$(echo $REMOTE | sed -E 's/.*github.com[/:]([[:alnum:]-]+)\/([[:alnum:]-]+)(\.git)?/\1/')
+AUTHOR=$(echo -n $REMOTE | sed -E 's/.*github.com[/:]([[:alnum:]-]+)\/([[:alnum:]-]+)(\.git)?$/\1/')
 if [[ $REMOTE == *"github"* ]]; then
 	{
 		ACTION=$(dunstify --action="open,Open on github" "$1" "$DETAILS")

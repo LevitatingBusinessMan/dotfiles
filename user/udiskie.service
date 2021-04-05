@@ -1,0 +1,9 @@
+[Unit]
+Description=Udiskie
+
+[Service]
+ExecStart=/usr/bin/udiskie
+Restart=always
+
+[Install]
+WantedBy=graphical.target
