@@ -16,5 +16,8 @@ url="https://github.com/LevitatingBusinessMan/git-bro.git"
 [dailyfloppa]
 url="https://github.com/dev-shit/dailyfloppa.git"
 
+[solaris]
+url="https://github.com/mike-eason/solaris.git"
+
 [settings]
 silent=true

@@ -80,3 +80,5 @@ alias less="less -r"
 alias bc="bc -l"
 
 alias clip="xclip -selection clipboard -i"
+
+alias bat="bat -n"
