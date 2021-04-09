@@ -46,7 +46,10 @@ do
         fi
 done
 
-echo "Do you wish to push these files to branch $(hostname)"
+echo -e "\nChanges: "
+git --no-pager diff --stat
+
+echo -e "\nDo you wish to push these files to branch $(hostname)"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) cd ${DF_DIRECTORY}; git add . && git commit -m "$(date)" && git push origin $(hostname); cd -; break;;
