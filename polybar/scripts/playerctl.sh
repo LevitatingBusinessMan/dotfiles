@@ -5,7 +5,7 @@ title=$(playerctl metadata --format "{{ title }}" 2> /dev/null)
 status=$(playerctl status 2> /dev/null)
 #statusSymbol=$(playerctl status --format "{{ emoji(status) }}" 2> /dev/null)
 
-#Check if title includes an artist alreadt
+#Check if title includes an artist already
 if [[ $title =~ " - " ]]
 then
 	display="$title"

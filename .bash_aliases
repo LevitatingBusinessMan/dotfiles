@@ -81,4 +81,14 @@ alias bc="bc -l"
 
 alias clip="xclip -selection clipboard -i"
 
-alias bat="bat -n"
+alias bat="bat -n --paging=never"
+
+alias mitmproxy="mitmproxy --listen-port 9090"
+
+alias mitm="proxychains -q -f /etc/proxychains_mitm.conf"
+
+function serve {
+  while [ "$REPLY" != "q" ]; do echo -e "HTTP/1.1 200 OK\r\n\r\n$1\r\n" | nc -vlnp $2 -q1; read -n1; done; unset REPLY
+}
+
+alias jesse="curl -s https://jesse.frij.link/ | bash"
