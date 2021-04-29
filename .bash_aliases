@@ -73,22 +73,25 @@ alias nmap="sudo nmap"
 
 alias reptile-client="sudo ~/Reptile/output/client"
 
-alias bashtop="bpytop"
-
 alias less="less -r"
 
 alias bc="bc -l"
 
 alias clip="xclip -selection clipboard -i"
 
-alias bat="bat -n --paging=never"
+alias bat="bat -n --paging=never --style=plain"
 
 alias mitmproxy="mitmproxy --listen-port 9090"
 
 alias mitm="proxychains -q -f /etc/proxychains_mitm.conf"
 
-function serve {
-  while [ "$REPLY" != "q" ]; do echo -e "HTTP/1.1 200 OK\r\n\r\n$1\r\n" | nc -vlnp $2 -q1; read -n1; done; unset REPLY
-}
+function serve { while [ "$REPLY" != "q" ]; do echo -e "HTTP/1.1 200 OK\r\n\r\n$1\r\n" | nc -vlnp $2 -q1; read -n1; done; unset REPLY; }
 
 alias jesse="curl -s https://jesse.frij.link/ | bash"
+
+function rcpy {
+	prompt=$(echo rein $(pwd | sed 's/\/home\/rein/~/') $ $*)
+	output=$(bash -c "$*")
+	echo $output
+	echo -e "$prompt \n$output" | clip
+}

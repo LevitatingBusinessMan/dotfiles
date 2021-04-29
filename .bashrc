@@ -51,3 +51,5 @@ export LESS="--RAW-CONTROL-CHARS"
 source /usr/share/nvm/init-nvm.sh
 
 PATH="${HOME}/.local/bin:/home/rein/.cargo/bin:/home/rein/.gem/ruby/2.7.0/bin:$PATH"
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
