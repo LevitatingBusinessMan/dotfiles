@@ -47,7 +47,9 @@ do
 done
 
 echo -e "\nChanges: "
+pushd "$DF_DIRECTORY"
 git --no-pager diff --stat
+popd
 
 echo -e "\nDo you wish to push these files to branch $(hostname)"
 select yn in "Yes" "No"; do
