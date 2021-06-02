@@ -79,7 +79,7 @@ alias bc="bc -l"
 
 alias clip="xclip -selection clipboard -i"
 
-alias bat="bat -n --paging=never --style=plain"
+alias bat="bat -n --paging=never --style=plain --color=always"
 
 alias mitmproxy="mitmproxy --listen-port 9090"
 
