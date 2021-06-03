@@ -1,0 +1,9 @@
+[Unit]
+Description=Polybar main
+
+[Service]
+ExecStart=/usr/bin/polybar main
+Restart=on-failure
+
+[Install]
+WantedBy=polybar.target

@@ -38,6 +38,9 @@ xset s off
 xset -dpms
 xset s noblank
 
+#My default setup (hori verti)
+xrandr --output DVI-D-0 --off --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-0 --mode 1920x1080 --pos 1920x0 --rotate right --output DP-1 --off
+
 #start udiskie
 #should be handled by systemd now
 #udiskie &
@@ -47,3 +50,4 @@ xset s noblank
 
 #start i3
 exec i3
+

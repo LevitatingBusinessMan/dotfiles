@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+# Moving workspaces between screens 
+bindsym $mod+p move workspace to output right
+
 #Origin crap
 for_window [instance="origin.exe"] floating enable
 for_window [instance="bf1.exe"] floating enable
@@ -32,7 +35,7 @@ gaps inner 15
 exec --no-startup-id systemctl --user start dunst
 
 # Polybar
-exec_always --no-startup-id systemctl --user start polybar
+exec_always --no-startup-id systemctl --user start polybar.target
 
 # Feh
 # exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/kimi.jpg
@@ -44,8 +47,10 @@ exec_always --no-startup-id systemctl --user start picom
 bindsym $mod+p exec imgur-screenshot
 
 # Redshift
-#This is handled by systemd now
-#exec--no-startup-id systemctl --user start redshift
+exec --no-startup-id systemctl --user start redshift
+
+# Replay Sorcery
+exec --no-startup-id systemctl --user start replay-sorcery
 
 # Polkit agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

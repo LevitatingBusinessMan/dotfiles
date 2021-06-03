@@ -6,4 +6,4 @@ ExecStart=/usr/bin/udiskie
 Restart=always
 
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
