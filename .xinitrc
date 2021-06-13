@@ -50,4 +50,3 @@ xset s noblank
 
 #start i3
 exec i3
-
