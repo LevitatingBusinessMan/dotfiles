@@ -76,7 +76,7 @@ font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-left = i3
 modules-center = playerctl
-modules-right = eth pulseaudio lights memory cpu date poweroff
+modules-right = openvpn eth pulseaudio lights memory cpu date poweroff
 
 [module/poweroff]
 type = custom/text
@@ -165,6 +165,14 @@ type = internal/memory
 interval = 2
 format-underline = #4bffdc
 label = %{T2}%{T-} %percentage_used%%
+
+[module/openvpn]
+type = internal/network
+interface = tun0
+interval = 5
+
+format-connected-underline = #6600cc
+label-connected =%{T2}%{T-} %local_ip%
 
 [module/eth]
 type = internal/network
