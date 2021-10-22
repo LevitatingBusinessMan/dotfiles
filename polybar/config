@@ -78,6 +78,11 @@ modules-left = i3
 modules-center = playerctl
 modules-right = openvpn eth pulseaudio lights memory cpu date poweroff
 
+[module/my_ip]
+type = custom/script
+exec = "curl https://api.ipify.org -s"
+interval = 5
+
 [module/poweroff]
 type = custom/text
 content = ""
@@ -87,7 +92,7 @@ click-left = shutdown now
 type = custom/script
 interval = 5
 ;content = "%{T3}"
-click-left = "node projects/yeelight-cli/index.js toggle"
+click-left = "yeelight-cli toggle | head -n1"
 format-underline = #fcad03
 exec = ~/.config/polybar/scripts/lights.sh
 

@@ -1,12 +1,11 @@
 #!/bin/bash
 
-OUTPUT=$(node projects/yeelight-cli/index.js get_prop power)
+OUTPUT=$(yeelight-cli get_prop power | head -n1)
 
-
-case $OUTPUT in
-	"{ id: 0, result: [ 'on' ] }")
+case ${OUTPUT::-1} in
+	"{\"id\":0,\"result\":[\"on\"]}")
 		echo "%{T3}" ;;
-	"{ id: 0, result: [ 'off' ] }")
+	"{\"id\":0,\"result\":[\"off\"]}")
 		echo "%{T2}" ;;
 	*)
 		echo "%{T2}";;
