@@ -1,0 +1,5 @@
+[Unit]
+Description=Open VPN connection
+
+[Service]
+ExecStart=/usr/bin/sudo /usr/bin/openvpn $HOME/Levitating.ovpn
