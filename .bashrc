@@ -33,7 +33,7 @@ export FFF_FAV5="/tmp"
 export FFF_COL2=6
 
 #For dfcp
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/picom.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf:$HOME/config_tablet.sh:$HOME/.config/dunst/dunstrc:$HOME/.config/git-bro:$HOME/dunst_volume.sh:$HOME/.config/systemd/user:$HOME/.screenlayout"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/picom.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf:$HOME/config_tablet.sh:$HOME/.config/dunst/dunstrc:$HOME/.config/git-bro:$HOME/dunst_volume.sh:$HOME/.config/systemd/user:$HOME/.screenlayout:$HOME/.config/mpv"
 
 STEAMCOMMON="${HOME}/Games/SteamLibrary/steamapps/common"
 

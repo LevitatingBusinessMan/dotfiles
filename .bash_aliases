@@ -67,7 +67,7 @@ alias tsv-view="(column -t -s $'\t' | less -S) <"
 
 alias jl="julia"
 
-alias d_dirsearch='dirsearch -e php,txt,html -t 30 -F --plain-text-report=dirsearch -w "$HOME/wordlists/common.txt" -t 30 -e php,txt,html'
+alias d_dirsearch='dirsearch -e php,txt,html -t 30 -F -w "$HOME/wordlists/common.txt" -t 30 -e php,txt,html'
 
 alias nmap="sudo nmap"
 
