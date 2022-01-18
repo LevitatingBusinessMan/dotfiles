@@ -75,8 +75,37 @@ font-1 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:size=13;2
 font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-left = i3
-modules-center = playerctl
-modules-right = openvpn eth pulseaudio lights memory cpu date poweroff
+modules-center = mpd
+modules-right = openvpn eth mpd_volume pulseaudio lights memory cpu date poweroff
+
+[module/mpd_volume]
+type = custom/script
+exec = mpc --host 192.168.1.103 volume 2>/dev/null | sed s/volume://
+interval = 1
+format-underline = #6afc20
+
+scroll-up = mpc --host 192.168.1.103 volume +5
+scroll-down = mpc --host 192.168.1.103 volume -5
+
+[module/mpd]
+type = internal/mpd
+host = 192.168.1.103
+port = 6600
+interval = 1
+format-online = %{A1:mpc --host 192.168.1.103 toggle:} %{A2:#mpd.prev:} %{A3:#mpd.next:} <toggle> <label-song>%{A}%{A}%{A}
+
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-seekb = 
+icon-seekf = 
+icon-random = 
+icon-repeat = 
+icon-repeatone = 
+icon-single = 
+icon-consume = 
 
 [module/my_ip]
 type = custom/script

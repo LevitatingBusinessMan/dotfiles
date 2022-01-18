@@ -95,3 +95,5 @@ function rcpy {
 	echo $output
 	echo -e "$prompt \n$output" | clip
 }
+
+alias mpc="mpc --host 192.168.1.103"
