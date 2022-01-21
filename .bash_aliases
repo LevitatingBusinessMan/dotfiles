@@ -96,4 +96,12 @@ function rcpy {
 	echo -e "$prompt \n$output" | clip
 }
 
+function title {
+   PROMPT_COMMAND="echo -ne \"\033]0;$1 (on $HOSTNAME)\007\""
+}
+
 alias mpc="mpc --host 192.168.1.103"
+
+function notepad {
+	alacritty -t notepad -e=micro $1 &
+}

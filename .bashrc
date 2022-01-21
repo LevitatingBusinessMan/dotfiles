@@ -53,3 +53,5 @@ source /usr/share/nvm/init-nvm.sh
 PATH="${HOME}/.local/bin:/home/rein/.cargo/bin:$PATH"
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+source ~/wpscan_token.sh

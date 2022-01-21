@@ -11,6 +11,21 @@
 
 set $mod Mod4
 
+# give the focused window a prefix
+bindsym $mod+y title_format "Important | %title"
+
+# Colors
+client.focused          #fff #fff #fff #fff #fff
+client.focused_inactive #fff #fff #fff #fff #fff
+client.unfocused        #fff #fff #fff #fff #fff
+client.urgent           #fff #fff #fff #fff #fff
+client.placeholder      #fff #fff #fff #fff #fff
+
+# Special notepad :)
+for_window [title="notepad"] floating enable
+for_window [title="notepad"] sticky enable
+for_window [title="notepad"] resize set 500 400
+
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 
@@ -25,8 +40,10 @@ for_window [instance="bf1.exe"] floating enable
 #Flameshot
 bindsym Print exec --no-startup-id flameshot gui
 
+# Disable titles
+default_border pixel 0
+
 # Gaps
-for_window [class=".*"] border pixel 0
 gaps top 43
 gaps bottom 3
 gaps horizontal 12
@@ -61,7 +78,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 10
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
