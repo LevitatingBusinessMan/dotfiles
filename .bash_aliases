@@ -105,3 +105,5 @@ alias mpc="mpc --host 192.168.1.103"
 function notepad {
 	alacritty -t notepad -e=micro $1 &
 }
+
+alias rapper_names="ls /usr/lib | grep lib | sed s/lib/lil/"

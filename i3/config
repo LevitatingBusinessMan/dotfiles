@@ -26,6 +26,8 @@ for_window [title="notepad"] floating enable
 for_window [title="notepad"] sticky enable
 for_window [title="notepad"] resize set 500 400
 
+bindsym $mod+n exec alacritty -t notepad -e=micro
+
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 
@@ -36,6 +38,28 @@ workspace 1 output HDMI-0
 #Origin crap
 for_window [instance="origin.exe"] floating enable
 for_window [instance="bf1.exe"] floating enable
+
+# Virtual Machine Manger
+for_window [title="Virtual Machine Manager"] floating enable
+for_window [title="Virtual Machine Manager"] border pixel 1
+for_window [title="Virtual Machine Manager"] resize set 600 400
+
+# Steam
+for_window [title="Steam - News*"] floating enable
+for_window [title="Steam - News*"] resize set 635 840
+for_window [title="Steam - News*"] move position center
+
+for_window [title="Steam - Self Updater"] floating enable
+for_window [title="Steam - Self Updater"] move position 300 300
+
+for_window [title="Steam Guard - Computer Authorization Required"] floating enable
+for_window [title="Steam Guard - Computer Authorization Required"] move position 500 300
+
+for_window [title="Move Install Folder"] floating enable
+for_window [title="Move Install Folder"] move position center
+
+for_window [title="Friends List"] floating enable
+for_window [title="Friends List"] move position center
 
 #Flameshot
 bindsym Print exec --no-startup-id flameshot gui
