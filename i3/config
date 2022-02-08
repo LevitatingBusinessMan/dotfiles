@@ -15,7 +15,7 @@ set $mod Mod4
 bindsym $mod+y title_format "Important | %title"
 
 # Colors
-client.focused          #fff #fff #fff #fff #fff
+client.focused          #fff #000 #fff #fff #fff
 client.focused_inactive #fff #fff #fff #fff #fff
 client.unfocused        #fff #fff #fff #fff #fff
 client.urgent           #fff #fff #fff #fff #fff
@@ -38,6 +38,9 @@ workspace 1 output HDMI-0
 #Origin crap
 for_window [instance="origin.exe"] floating enable
 for_window [instance="bf1.exe"] floating enable
+
+# /usr/bin/steamtinkerlaunch
+for_window [instance="steamtinkerlaunch"] floating enable
 
 # Virtual Machine Manger
 for_window [title="Virtual Machine Manager"] floating enable

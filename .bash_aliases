@@ -107,3 +107,5 @@ function notepad {
 }
 
 alias rapper_names="ls /usr/lib | grep lib | sed s/lib/lil/"
+
+alias tree="exa --tree"
