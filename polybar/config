@@ -80,7 +80,8 @@ modules-right = openvpn eth mpd_volume pulseaudio lights memory cpu date powerof
 
 [module/mpd_volume]
 type = custom/script
-exec = mpc --host 192.168.1.103 volume 2>/dev/null | sed s/volume://
+#exec = mpc --host 192.168.1.103 volume 2>/dev/null | sed s/volume://
+exec = echo -n " $(cat /tmp/mpd_volume)"
 interval = 1
 format-underline = #6afc20
 

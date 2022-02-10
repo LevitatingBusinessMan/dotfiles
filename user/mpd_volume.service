@@ -1,0 +1,5 @@
+[Unit]
+Description=Listener for mpd volume changes
+
+[Service]
+ExecStart=/usr/bin/ruby "${HOME}/scripts/mpd_volume.rb"
