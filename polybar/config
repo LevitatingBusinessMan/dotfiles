@@ -48,7 +48,7 @@ font-1 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:size=13;2
 font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-right = i3
-modules-left = date
+modules-left = date restart_polybar
 
 padding-left = 2
 
@@ -87,6 +87,11 @@ format-underline = #6afc20
 
 scroll-up = mpc --host 192.168.1.103 volume +5
 scroll-down = mpc --host 192.168.1.103 volume -5
+
+[module/restart_polybar]
+type = custom/text
+content = ""
+click-left = "systemctl --user restart polybar@main polybar@code"
 
 [module/mpd]
 type = internal/mpd

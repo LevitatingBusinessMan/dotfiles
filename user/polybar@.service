@@ -1,0 +1,6 @@
+[Unit]
+Description=Polybar %i
+
+[Service]
+ExecStart=/usr/bin/polybar %i
+Restart=on-failure
