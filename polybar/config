@@ -56,6 +56,8 @@ padding-left = 2
 width = 100%:-48
 height = 35
 
+enable-ipc = true
+
 # 34 seems to be the outer gap in set i3-gaps
 offset-x = 24
 offset-y = 10
@@ -76,13 +78,14 @@ font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-left = i3
 modules-center = mpd
-modules-right = openvpn eth mpd_volume pulseaudio lights memory cpu date poweroff
+modules-right = openvpn eth test mpd_volume pulseaudio lights memory cpu date poweroff
 
 [module/mpd_volume]
-type = custom/script
-#exec = mpc --host 192.168.1.103 volume 2>/dev/null | sed s/volume://
-exec = echo -n " $(cat /tmp/mpd_volume)"
-interval = 1
+type = custom/ipc
+hook-0 = echo -n " ?"
+hook-1 = echo -n " $(cat /tmp/mpd_volume)"
+initial = 1
+
 format-underline = #6afc20
 
 scroll-up = mpc --host 192.168.1.103 volume +5

@@ -89,8 +89,8 @@ exec --no-startup-id systemctl --user start mpd_volume
 exec --no-startup-id systemctl --user start dunst
 
 # Polybar
-exec_always --no-startup-id systemctl --user start polybar@main.target
-exec_always --no-startup-id systemctl --user start polybar@code.target
+exec_always --no-startup-id systemctl --user start polybar@main
+exec_always --no-startup-id systemctl --user start polybar@code
 
 # Feh
 # exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/kimi.jpg
