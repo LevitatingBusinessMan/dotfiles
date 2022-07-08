@@ -48,6 +48,7 @@ alias rb="ruby"
 alias tunnel="sudo killall openvpn; sudo -b openvpn ~/Levitating.ovpn &> /dev/null"
 
 alias du="du -h"
+alias df="df -h"
 
 alias upscale="waifu2x -model_dir /usr/share/waifu2x/models/photo -m scale -i"
 
@@ -76,8 +77,6 @@ alias reptile-client="sudo ~/Reptile/output/client"
 alias less="less -r"
 
 alias bc="bc -l"
-
-alias clip="xclip -selection clipboard -i"
 
 alias bat="bat -n --paging=never --style=plain --color=always"
 
@@ -111,3 +110,21 @@ alias rapper_names="ls /usr/lib | grep lib | sed s/lib/lil/"
 alias tree="exa --tree"
 
 alias gef='gdb -ex "source /usr/share/gef/gef.py"'
+
+alias objdump="objdump -M intel"
+
+alias dateformats='info "Date input formats"'
+
+alias pac_orphan_size="pacman -Qitdq | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
+
+alias gdiff="GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
+
+function timer {
+	sleep $(echo $(date -d"$1" +%s) - $(date +%s) | bc)
+	aplay ~/sounds/notification.wav 2>/dev/null
+	notify-send "Timer $1" "$2"
+}
+
+alias wim_list="xwininfo -tree -root"
+
+alias dooit="~/mythos/bin/dooit"

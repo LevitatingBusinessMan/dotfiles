@@ -37,7 +37,8 @@ def get_status mpd
 				break
 			end
 		end
-		suc
+
+		err "Didn't receive volume from response" if !suc
 end
 
 # Get an initial value
@@ -53,9 +54,7 @@ loop do
 			err "Unexpected response: #{data}"
 		end
 
-		suc = get_status mpd
-
-		err "Didn't receive volume from response: #{res}" if !suc
+		get_status mpd
 
 	rescue Exception => e
 		err "Some exception occured: #{e.inspect}"

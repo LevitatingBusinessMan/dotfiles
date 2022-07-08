@@ -1,0 +1,14 @@
+diff --git a/gef.py b/gef.py
+index bd3d3fe..e318405 100644
+--- a/gef.py
++++ b/gef.py
+@@ -147,7 +147,8 @@ VERTICAL_LINE                          = "\u2502"
+ CROSS                                  = "\u2718 "
+ TICK                                   = "\u2713 "
+ BP_GLYPH                               = "\u25cf"
+-GEF_PROMPT                             = "gef\u27a4  "
++#GEF_PROMPT                             = "gef\u27a4  "
++GEF_PROMPT                             = "gef> "
+ GEF_PROMPT_ON                          = f"\001\033[1;32m\002{GEF_PROMPT}\001\033[0m\002"
+ GEF_PROMPT_OFF                         = f"\001\033[1;31m\002{GEF_PROMPT}\001\033[0m\002"
+ 

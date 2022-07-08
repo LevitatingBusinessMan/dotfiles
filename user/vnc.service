@@ -1,0 +1,9 @@
+[Unit]
+Description=TigerVNC (x0vncserver)
+
+[Service]
+ExecStart=/usr/bin/x0vncserver -rfbauth .vnc/passwd -geometry "1920x1080+0+420"
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target

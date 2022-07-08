@@ -77,8 +77,8 @@ font-1 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:size=13;2
 font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-left = i3
-modules-center = mpd
-modules-right = openvpn eth test mpd_volume pulseaudio lights memory cpu date poweroff
+modules-center = playerctl
+modules-right = openvpn eth mpd_volume pulseaudio lights memory cpu date poweroff
 
 [module/mpd_volume]
 type = custom/ipc
@@ -133,7 +133,6 @@ interval = 5
 click-left = "yeelight-cli toggle | head -n1"
 format-underline = #fcad03
 exec = ~/.config/polybar/scripts/lights.sh
-
 
 [module/playerctl]
 type = custom/script
@@ -209,10 +208,14 @@ interval = 2
 format-underline = #4bffdc
 label = %{T2}%{T-} %percentage_used%%
 
-[module/openvpn]
+[module/wireguard]
 type = internal/network
-interface = tun0
+interface-type = wired
+interface = sting
 interval = 5
+
+format-disconnected-underline = #6600cc
+label-disconnected = %{T2}%{T-} %local_ip%
 
 format-connected-underline = #6600cc
 label-connected =%{T2}%{T-} %local_ip%
@@ -224,6 +227,15 @@ interval = 5
 
 format-connected-underline = #6600cc
 label-connected =%{T2}%{T-} %local_ip%
+
+[module/openvpn]
+type = internal/network
+interface = tun0
+interval = 5
+
+format-connected-underline = #6600cc
+label-connected =%{T2}%{T-} %local_ip%
+
 
 [module/date]
 type = internal/date

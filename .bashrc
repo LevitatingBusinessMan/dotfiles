@@ -34,7 +34,7 @@ export FFF_FAV5="/tmp"
 export FFF_COL2=6
 
 #For dfcp
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/picom.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf:$HOME/config_tablet.sh:$HOME/.config/dunst/dunstrc:$HOME/.config/git-bro:$HOME/dunst_volume.sh:$HOME/.config/systemd/user:$HOME/.screenlayout:$HOME/.config/mpv:$HOME/.config/alacritty.yml:$HOME/scripts"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.xinitrc:$HOME/.config/i3:$HOME/.config/picom.conf:$HOME/.config/polybar:$HOME/.config/rofi:$HOME/.local/share/konsole:$HOME/.config/micro:$HOME/.config/dunst:$HOME/.config/replay-sorcery.conf:$HOME/config_tablet.sh:$HOME/.config/dunst/dunstrc:$HOME/.config/git-bro:$HOME/dunst_volume.sh:$HOME/.config/systemd/user:$HOME/.screenlayout:$HOME/.config/mpv:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg"
 
 STEAMCOMMON="${HOME}/Games/SteamLibrary/steamapps/common"
 
@@ -51,8 +51,11 @@ export LESS="--RAW-CONTROL-CHARS"
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
 
-PATH="${HOME}/.local/bin:/home/rein/.cargo/bin:$PATH"
+PATH="$PATH:/home/rein/.local/bin:/home/rein/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin"
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 source ~/wpscan_token.sh
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh

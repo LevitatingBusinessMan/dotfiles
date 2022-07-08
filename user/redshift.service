@@ -5,3 +5,5 @@ Description=Redshift
 ExecStart=/usr/bin/redshift -l 52.27333:5.16111
 Restart=always
 
+[Install]
+WantedBy=graphical.target
