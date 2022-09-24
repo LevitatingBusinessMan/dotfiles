@@ -1,5 +1,5 @@
 {
-    "colorscheme": "custom",
+    "colorscheme": "dracula-custom",
     "diffgutter": true,
     "eofnewline": false,
     "fastdirty": true,

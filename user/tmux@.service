@@ -1,0 +1,10 @@
+[Unit]
+Description=%i in a tmux session
+
+[Service]
+Type=forking
+ExecStart=tmux new -ds %i %i
+Restart=no
+
+[Install]
+WantedBy=default.target
