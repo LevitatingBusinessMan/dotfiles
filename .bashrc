@@ -135,7 +135,7 @@ export PATH="$PATH:$HOME/bin"
 export WORKON_HOME=~/.virtualenvs
 #source /bedrock/cross/bin/virtualenvwrapper.sh
 
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/micro:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg:$HOME/.config/fish"
 
 # bash --norc to avoid going into fish
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
