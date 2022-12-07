@@ -1,0 +1,15 @@
+#Add a repo like this
+[Pearls-w4-FunctionalProgramming]
+# The remote address to fetch the repo from
+url="git@github.com:LevitatingBusinessMan/Pearls-w4-FunctionalProgramming.git"
+
+[git-bro]
+url="git@github.com:LevitatingBusinessMan/git-bro.git"
+
+[notes]
+url="git@github.com:LevitatingBusinessMan/notes.git"
+
+# Global settings go here
+[settings]
+# If git-bro should make notifications when it detects an update
+silent = true

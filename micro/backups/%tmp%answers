@@ -1,0 +1,29 @@
+1
+    a
+        SELECT firstname, lastname FROM Resident ORDER BY lastname
+    b
+        SELECT brandname FROM WineBrand WHERE location = 'Italy'
+    c
+        SELECT wb.brandmame, wt.typname FROM WineBrand as wb, WineType as wt WHERE wb.location = "Australia"   
+    d
+        UPDATE WineBrand SET location = "Europe" WHERE brandame = "Zorin"
+    e
+        SELECT r.firstname, SUM(c.number) FROM Resident as r, Consumption as C WHERE r.resid = c.resid GROUP BY firstname
+    f
+        SELECT wb . brandname , wt . typename , date , number
+        FROM WineType wt , WineBrand wb , WineStock ws , Consumption c , Resident r
+        WHERE r . firstname = " Michael "
+        AND r . lastname = " Broadbent "
+        AND c . resid = r . resid
+        AND c . stockid = ws . stockid
+        AND wb . brandid = ws . brandid
+        AND wb . typeid = wt . typeid
+    g
+        INSERT INTO WineBrand ( brandid , brandname , location , typeid )
+        VALUES (13 , " Olarra " , " Spain " , 3)
+    h
+        SELECT MAX(ws.ppb) FROM WineStock as ws, Consumption as c WHERE c.stockid == ws.stockid
+
+2
+    a
+        

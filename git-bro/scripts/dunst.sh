@@ -1,0 +1,17 @@
+#!/bin/bash
+cd $HOME/.local/share/git-bro/repos/$1
+DETAILS=$(git show -s --format="%an %s (%h)")
+
+HASH=$(git rev-parse HEAD)
+REMOTE=$(git config --get remote.origin.url)
+AUTHOR=$(echo -n $REMOTE | sed -E 's/.*github.com[/:]([[:alnum:]-]+)\/([[:alnum:]-]+)(\.git)?$/\1/')
+if [[ $REMOTE == *"github"* ]]; then
+	{
+		ACTION=$(dunstify --action="open,Open on github" "$1" "$DETAILS")
+		if [[ $ACTION == "open" ]]; then
+			xdg-open "https://github.com/${AUTHOR}/${1}/commit/${HASH}"
+		fi
+	} &
+else
+	dunstify "$1" "$DETAILS"
+fi

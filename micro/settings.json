@@ -1,0 +1,30 @@
+{
+    "*.ascii": {
+        "autoclose": false,
+        "softwrap": false,
+        "tabsize": 4,
+        "tabstospaces": true
+    },
+    "*.pl": {
+        "filetype": "perl"
+    },
+    "autoclose": false,
+    "colorscheme": "dracula-custom",
+    "diffgutter": true,
+    "eofnewline": false,
+    "fastdirty": true,
+    "ft:haskell": {
+        "tabstospaces": true
+    },
+    "ft:unknown": {
+        "tabtospaces": true
+    },
+    "ignorecase": false,
+    "indentchar": "-",
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "softwrap": true,
+    "wordwrap": true
+}
