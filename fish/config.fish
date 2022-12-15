@@ -2,6 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     source ~/.bash_aliases
     source $__fish_config_dir/functions/git.fish
+    source $__fish_config_dir/functions/fff.fish
+
+    # Disable fish greeting
+    set fish_greeting
 end
 
 function fish_prompt --description 'Write out the prompt'
@@ -48,6 +52,13 @@ function fish_prompt --description 'Write out the prompt'
     set -l statusb_color (set_color $bold_flag $fish_color_status)
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-    echo -n -s (set_color green -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
+    set -l distro (brl which)
+    if test $distro = "s"
+    	set distro
+    else
+    	set distro "($distro) "
+    end
+
+    echo -n -s (set_color cyan -o) $distro (set_color green -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
 end
 

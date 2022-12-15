@@ -40,3 +40,7 @@ alias irc="mosh irc@192.168.1.104"
 alias scan="nmcli d wifi rescan"
 
 alias e="exit"
+
+alias rapper_names="ls /usr/lib | grep lib | sed s/lib/lil/"
+
+alias my_ip="curl https://api.ipify.org"
