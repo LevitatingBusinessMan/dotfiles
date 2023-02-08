@@ -11,11 +11,9 @@ alias lt='ls -t'
 alias lr='ls -LR'
 
 #list all commands
-alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
+#alias list='bIFS=$IFS; IFS=":"; read -a path_array <<< $PATH; IFS=$bIFS; path_array_=("${path_array[@]}"); for i in "${path_array_[@]}"; do ls $i; done | uniq | sort'
 
-alias dfcp="${HOME}/projects/dotfilescp/dfcp"
-
-alias rc="${EDITOR} ${HOME}/.bashrc"
+alias rc="$EDITOR $HOME/.bashrc"
 
 alias wttr='curl v2.wttr.in'
 
@@ -64,7 +62,7 @@ alias my_ip="curl https://api.ipify.org"
 
 alias proxy_tor="proxychains -q -f /etc/proxychains_tor.conf"
 
-alias tsv-view="(column -t -s $'\t' | less -S) <"
+#alias tsv-view="(column -t -s $'\t' | less -S) <"
 
 alias jl="julia"
 
@@ -84,26 +82,26 @@ alias mitmproxy="mitmproxy --listen-port 9090"
 
 alias mitm="proxychains -q -f /etc/proxychains_mitm.conf"
 
-function serve { while [ "$REPLY" != "q" ]; do echo -e "HTTP/1.1 200 OK\r\n\r\n$1\r\n" | nc -vlnp $2 -q1; read -n1; done; unset REPLY; }
+# function serve { while [ "$REPLY" != "q" ]; do echo -e "HTTP/1.1 200 OK\r\n\r\n$1\r\n" | nc -vlnp $2 -q1; read -n1; done; unset REPLY; }
 
 alias jesse="curl -s https://jesse.frij.link/ | bash"
 
-function rcpy {
-	prompt=$(echo rein $(pwd | sed 's/\/home\/rein/~/') $ $*)
-	output=$(bash -c "$*")
-	echo $output
-	echo -e "$prompt \n$output" | clip
-}
+# function rcpy {
+	# prompt=$(echo rein $(pwd | sed 's/\/home\/rein/~/') $ $*)
+	# output=$(bash -c "$*")
+	# echo $output
+	# echo -e "$prompt \n$output" | clip
+# }
 
-function title {
-   PROMPT_COMMAND="echo -ne \"\033]0;$1 (on $HOSTNAME)\007\""
-}
+# function title {
+   # PROMPT_COMMAND="echo -ne \"\033]0;$1 (on $HOSTNAME)\007\""
+# }
 
 alias mpc="mpc --host 192.168.1.103"
 
-function notepad {
-	alacritty -t notepad -e=micro $1 &
-}
+# function notepad {
+	# alacritty -t notepad -e=micro $1 &
+# }
 
 alias rapper_names="ls /usr/lib | grep lib | sed s/lib/lil/"
 
@@ -117,14 +115,23 @@ alias dateformats='info "Date input formats"'
 
 alias pac_orphan_size="pacman -Qitdq | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 
-alias gdiff="GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
+alias gdiff="GIT_EXTERNAL_DIFF=difft git diff"
 
-function timer {
-	sleep $(echo $(date -d"$1" +%s) - $(date +%s) | bc)
-	aplay ~/sounds/notification.wav 2>/dev/null
-	notify-send "Timer $1" "$2"
-}
+# function timer {
+	# sleep $(echo $(date -d"$1" +%s) - $(date +%s) | bc)
+	# aplay ~/sounds/notification.wav 2>/dev/null
+	# notify-send "Timer $1" "$2"
+# }
 
 alias wim_list="xwininfo -tree -root"
 
 alias dooit="~/mythos/bin/dooit"
+
+alias cp="cp -p"
+
+alias e="exit"
+
+alias hashcat="hashcat -w3 -d2"
+
+alias echomic="pactl load-module module-loopback"
+alias unechomic="pactl unload-module module-loopback"

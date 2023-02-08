@@ -40,8 +40,8 @@ bindsym $mod+n exec alacritty -t notepad -e=micro
 bindsym $mod+p move workspace to output right
 
 # Make secondary screen use workspace 10 by default
-workspace 10 output DP-0
-workspace 1 output HDMI-0
+workspace 10 output HDMI-A-0
+workspace 1 output DisplayPort-1
 
 # PCSX2
 for_window [title="PCSX2*"] floating enable

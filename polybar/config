@@ -36,7 +36,7 @@ override-redirect = true
 wm-restack = i3
 padding-right = 5
 module-margin = 2
-monitor=DP-0
+monitor=HDMI-A-0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -55,6 +55,7 @@ padding-left = 2
 [bar/main]
 width = 100%:-48
 height = 35
+monitor=DisplayPort-1
 
 enable-ipc = true
 
@@ -78,7 +79,7 @@ font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=13;2
 
 modules-left = i3
 modules-center = playerctl
-modules-right = openvpn eth mpd_volume pulseaudio lights memory cpu date poweroff
+modules-right = openvpn eth mpd_volume pulseaudio memory cpu date poweroff
 
 [module/mpd_volume]
 type = custom/ipc
@@ -225,8 +226,17 @@ type = internal/network
 interface = eth0
 interval = 5
 
+
 format-connected-underline = #6600cc
 label-connected =%{T2}%{T-} %local_ip%
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 5
+format-connected-underline = #2200cc
+label-connected =%{T2}%{T-} %local_ip%
+
 
 [module/openvpn]
 type = internal/network
