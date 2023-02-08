@@ -1,8 +1,9 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     source ~/.bash_aliases
-    source $__fish_config_dir/functions/git.fish
-    source $__fish_config_dir/functions/fff.fish
+
+    # Some git utility functions for the prompt
+    source $__fish_config_dir/git-util.fish
 
     # Disable fish greeting
     set fish_greeting
@@ -61,4 +62,6 @@ function fish_prompt --description 'Write out the prompt'
 
     echo -n -s (set_color cyan -o) $distro (set_color green -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
 end
+
+export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
 

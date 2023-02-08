@@ -120,7 +120,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts"
+export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
 
 export EDITOR="micro"
 
@@ -130,12 +130,12 @@ f() {
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
 
-export PATH="$PATH:$HOME/bin"
-
 export WORKON_HOME=~/.virtualenvs
 #source /bedrock/cross/bin/virtualenvwrapper.sh
 
 export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg:$HOME/.config/fish:$HOME/.config/i3status"
+
+export SYSTEMD_EDITOR=micro
 
 # bash --norc to avoid going into fish
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]

@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync directory %i with unison every 5 minutes
+
+[Timer]
+OnUnitInactiveSec=5min
+OnBootSec=1min
+[Install]
+WantedBy=timers.target

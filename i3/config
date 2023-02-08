@@ -21,6 +21,9 @@ bindsym $mod+g border none
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 
+# Lock
+bindsym $mod+Shift+l exec i3lock-fancy -t "HACK ME" -- maim
+
 # feh
 exec --no-startup-id feh --bg-tile Pictures/wallpapers/wallpaper.jpg
 
@@ -107,10 +110,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left

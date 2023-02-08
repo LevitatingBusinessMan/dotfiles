@@ -25,7 +25,7 @@ alias light="sudo /bedrock/cross/bin/light"
 
 alias view="micro -readonly on"
 
-alias gdiff="GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
+#alias gdiff="GIT_EXTERNAL_DIFF=difft git log -p --ext-diff"
 
 alias ghc-pristine="/usr/share/ghc-pristine/bin/ghc"
 
