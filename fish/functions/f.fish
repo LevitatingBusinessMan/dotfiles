@@ -1,5 +1,4 @@
-# Run 'fff' with 'f' or whatever you decide to name the function.
-function f
+function f --wraps "fff" --description "fff and cd to directory"
     fff "$argv"
     cd (cat ~/.cache/fff/.fff_d)
 end
