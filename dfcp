@@ -6,7 +6,7 @@ set -e
 #Set DF_DIRECTORY if unset
 if [ -z "$DF_DIRECTORY" ]
 then
-        DF_DIRECTORY="${HOME}/Dot_Files"
+        DF_DIRECTORY="${HOME}/dotfiles"
 fi
 
 echo "DF_DIRECTORY: $DF_DIRECTORY"
