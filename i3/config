@@ -31,7 +31,8 @@ bindsym $mod+h sticky disable, title_format "%title"
 
 # Special notepad :)
 for_window [title="notepad"] floating enable
-for_window [title="notepad"] sticky enable
+for_window [title="notepad"] border normal
+for_window [title="notepad"] sticky enable, title_format "Sticky | %title"
 for_window [title="notepad"] resize set 500 400
 
 bindsym $mod+n exec alacritty -t notepad -e=micro
