@@ -2,10 +2,6 @@
 # ~/.bash_aliases
 #
 
-alias grep='grep --color=auto'
-alias ls='ls --color=auto'
-alias diff='diff --color=auto'
-
 alias ll='ls -alFh'
 alias lt='ls -t'
 alias lr='ls -LR'
@@ -135,3 +131,5 @@ alias hashcat="hashcat -w3 -d2"
 
 alias echomic="pactl load-module module-loopback"
 alias unechomic="pactl unload-module module-loopback"
+
+alias unison="unison -diff 'difft --color=always'"
