@@ -56,5 +56,5 @@ function fish_prompt --description 'Write out the prompt'
     echo -n -s (set_color cyan -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
 end
 
-export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/.config/emacs/bin/:$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
 

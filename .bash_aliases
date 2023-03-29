@@ -34,9 +34,6 @@ alias view="micro -readonly on"
 
 alias lights="node projects/yeelight-cli/index.js"
 
-alias pac_who="pacman -Qo"
-alias pac_list="pacman -Ql"
-
 alias rb="ruby"
 
 alias tunnel="sudo killall openvpn; sudo -b openvpn ~/Levitating.ovpn &> /dev/null"

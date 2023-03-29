@@ -37,6 +37,9 @@ for_window [title="notepad"] resize set 500 400
 
 bindsym $mod+n exec alacritty -t notepad -e=micro
 
+# feh as image viewer
+for_window [class="feh"] border normal
+
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 
