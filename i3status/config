@@ -12,13 +12,14 @@ general {
         interval = 5
 }
 
-order += "wireless wlp2s0"
+order += "wireless wlp1s0"
 order += "ethernet tun0"
+order += "volume master"
 order += "battery all"
 order += "memory"
 order += "tztime local"
 
-wireless wlp2s0 {
+wireless wlp1s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }
@@ -34,6 +35,11 @@ battery all {
 
 disk "/" {
         format = "%avail"
+}
+
+volume master {
+	format = "VOL %volume"
+	format_muted = "VOL muted"
 }
 
 load {

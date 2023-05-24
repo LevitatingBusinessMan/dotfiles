@@ -133,9 +133,11 @@ f() {
 export WORKON_HOME=~/.virtualenvs
 #source /bedrock/cross/bin/virtualenvwrapper.sh
 
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg:$HOME/.config/fish:$HOME/.config/i3status"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg:$HOME/.config/fish:$HOME/.config/i3status:$HOME/.config/paru"
 
 export SYSTEMD_EDITOR=micro
+
+source /usr/share/nvm/init-nvm.sh
 
 # bash --norc to avoid going into fish
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
