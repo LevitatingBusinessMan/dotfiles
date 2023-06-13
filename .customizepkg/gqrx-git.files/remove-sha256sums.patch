@@ -1,0 +1,16 @@
+diff --git a/PKGBUILD b/PKGBUILD
+index 3f3cf3e..49d0365 100644
+--- a/PKGBUILD
++++ b/PKGBUILD
+@@ -23,11 +23,6 @@ md5sums=('95292c41a5d521c023a26d615a5e2478'
+          'f7032a8883c89bd80e0d0fd36f861c59'
+          '810f89195231c18f32af92522aade721'
+          'SKIP')
+-sha256sums=('910bb64e475cfadc8f3ac51e2a3bb61f42a7a2ec55a60aa9121d213c651f2d73'
+-            '490fdc3e16c8d6ae38894896f622531e2bf617963165ce2430a3c132d91ba5e5'
+-            'abb0c2598830c9fe728d8cd0d2f187d10331f7cb607520ff3664afd67a3a279d'
+-            'c67ff791ff9e1380e207ea9af32a0273f738a6b19d3b11251a94b931d6c00434'
+-            'SKIP')
+ 
+ pkgver() {
+   cd "$srcdir/$_gitname"

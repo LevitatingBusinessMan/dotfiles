@@ -54,5 +54,7 @@ hsetroot -solid '#777'
 # Wish this would work from a kernel param (cpufreq.default_governor=performance)
 sudo cpupower frequency-set -g performance
 
+export TERMINAL=alacritty
+
 #start i3
 exec i3

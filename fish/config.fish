@@ -53,8 +53,12 @@ function fish_prompt --description 'Write out the prompt'
     set -l statusb_color (set_color $bold_flag $fish_color_status)
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-    echo -n -s (set_color cyan -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
+    set -l virtualenv
+    if set -q VIRTUAL_ENV
+        set virtual_env "(" (basename "$VIRTUAL_ENV") ")"
+    end
+    echo -n -s (set_color cyan -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " " $virtual_env " " (set_color $color_suffix -o)$suffix " "
 end
 
+# fish_add_path
 export PATH="$HOME/.config/emacs/bin/:$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
-

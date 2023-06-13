@@ -47,7 +47,7 @@ alias catbin="nc catbin.xyz 5454 <"
 
 alias srcinfo="makepkg --printsrcinfo > .SRCINFO"
 
-alias yay="yay --removemake"
+#alias yay="yay --removemake"
 
 alias make="make -j3"
 

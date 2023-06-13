@@ -11,6 +11,8 @@
 
 set $mod Mod4
 
+bindsym F4 exec --no-startup-id dunstify "$(~/scripts/next_sink.fish)" -h string:x-dunst-stack-tag:sink -t 1000
+
 # give the focused window a prefix
 #bindsym $mod+y title_format "Important | %title"
 
@@ -115,7 +117,7 @@ exec_always --no-startup-id systemctl --user start polybar@code
 exec_always --no-startup-id systemctl --user start picom
 
 # deepin-screenshot
-bindsym $mod+p exec imgur-screenshot
+# bindsym $mod+p exec imgur-screenshot
 
 # Redshift
 exec --no-startup-id systemctl --user start redshift
@@ -156,6 +158,7 @@ bindsym Control+grave exec dunstctl history-pop
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+#bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -192,10 +195,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-#bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
-#bindsym $mod+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
