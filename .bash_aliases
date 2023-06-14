@@ -47,4 +47,4 @@ alias my_ip="curl https://api.ipify.org"
 
 alias d_dirsearch='dirsearch -e php,txt,html -t 30 -w "$HOME/wordlists/common.txt" -t 30 -e php,txt,html'
 
-alias yay='yay --mflags="--nocheck"'
+#alias yay='yay --mflags="--nocheck"'

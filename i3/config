@@ -27,6 +27,9 @@ bindsym F10 exec i3lock-fancy -pt "HACK ME" -- maim
 # Lock on suspend
 exec --no-startup-id exec xss-lock -- i3lock-fancy -pt "HACK ME" -- maim
 
+# Gestures
+exec --no-startup-id exec systemctl --user start fusuma
+
 # feh
 exec --no-startup-id feh --bg-tile Pictures/wallpapers/wallpaper.jpg
 
