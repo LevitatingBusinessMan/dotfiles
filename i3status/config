@@ -19,7 +19,7 @@ order += "battery all"
 order += "memory"
 order += "tztime local"
 
-wireless wlp1s0 {
+wireless wlp0s20f3 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }

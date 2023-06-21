@@ -133,7 +133,7 @@ f() {
 export WORKON_HOME=~/.virtualenvs
 #source /bedrock/cross/bin/virtualenvwrapper.sh
 
-export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg:$HOME/.config/fish:$HOME/.config/i3status:$HOME/.config/paru:$HOME/.config/fusuma"
+export DOT_FILES="$HOME/.bash_profile:$HOME/.bashrc:$HOME/.bash_aliases:$HOME/.config/i3:$HOME/.config/git-bro:$HOME/.config/systemd/user:$HOME/.config/alacritty.yml:$HOME/scripts:$HOME/.customizepkg:$HOME/.config/fish:$HOME/.config/i3status:$HOME/.config/paru:$HOME/.config/fusuma:$HOME/.gitconfig"
 
 export SYSTEMD_EDITOR=micro
 

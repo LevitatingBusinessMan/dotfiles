@@ -1,0 +1,13 @@
+[user]
+	email = me@levitati.ng
+	name = LevitatingBusinessMan (Rein Fernhout)
+[init]
+	defaultBranch = master
+[core]
+	autocrlf = input
+
+[alias]
+tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
+
+# https://stackoverflow.com/a/35075021
+adog = log --all --decorate --oneline --graph
