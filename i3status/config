@@ -12,14 +12,14 @@ general {
         interval = 5
 }
 
-order += "wireless wlp1s0"
+order += "wireless wlan0"
 order += "ethernet tun0"
 order += "volume master"
 order += "battery all"
 order += "memory"
 order += "tztime local"
 
-wireless wlp0s20f3 {
+wireless wlan0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }

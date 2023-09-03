@@ -3,6 +3,7 @@ Description=Give a daily synonym of the day message
 
 [Timer]
 OnCalendar=*-*-* 8:00:00
+Persistent=true
 
 [Install]
 WantedBy=timers.target

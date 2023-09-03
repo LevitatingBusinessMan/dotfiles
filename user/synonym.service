@@ -2,4 +2,5 @@
 Description=Give synonym of the day message
 
 [Service]
-ExecStart=/bedrock/cross/bin/ruby %h/scripts/synonym.rb
+Type=forking
+ExecStart=/home/rein/scripts/synonym.rb

@@ -23,7 +23,7 @@ bindsym $mod+p move workspace to output right
 
 # Lock
 bindsym $mod+Shift+l exec i3lock-fancy -pt "HACK ME" -- maim
-bindsym F10 exec i3lock-fancy -pt "HACK ME" -- maim
+#bindsym F10 exec i3lock-fancy -pt "HACK ME" -- maim
 # Lock on suspend
 exec --no-startup-id exec xss-lock -- i3lock-fancy -pt "HACK ME" -- maim
 
@@ -94,6 +94,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
+bindsym $mod+F1 exec alacritty
 bindsym $mod+Return exec alacritty
 
 # kill focused window

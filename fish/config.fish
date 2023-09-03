@@ -17,12 +17,12 @@ function fish_prompt --description 'Write out the prompt'
     or set -g fish_color_status --background=red white
 
     # Color the prompt differently when we're root
-    set -l color_cwd blue -o
+    set -l color_cwd $fish_color_cwd -o
     set -l suffix '$'
     set -l color_suffix brmagenta
     if functions -q fish_is_root_user; and fish_is_root_user
         if set -q fish_color_cwd_root
-            set color_cwd $fish_color_cwd_root
+            set color_cwd $fish_color_cwd_root -o
         end
         set suffix '#'
     end
@@ -60,7 +60,7 @@ function fish_prompt --description 'Write out the prompt'
     	set distro "($distro) "
     end
 
-    echo -n -s (set_color cyan -o) $distro (set_color green -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
+    echo -n -s (set_color cyan -o) $distro (set_color $fish_color_user -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
 end
 
 export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"

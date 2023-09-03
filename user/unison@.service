@@ -2,5 +2,5 @@
 Description=Sync directory %i with unison
 
 [Service]
-ExecStart=unison -sshargs '-i /home/rein/.ssh/xlab18' -auto -batch /home/rein/%i ssh://x-lab18.local.boem/unison/%i
+ExecStart=bash -c 'unison -sshargs "-i $HOME/.ssh/xlab18" -auto -batch $HOME/%i ssh://x-lab18.local.boem/unison/%i'
 Restart=no
