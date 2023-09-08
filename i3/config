@@ -22,10 +22,10 @@ bindsym $mod+g border none
 bindsym $mod+p move workspace to output right
 
 # Lock
-bindsym $mod+Shift+l exec i3lock-fancy -pt "HACK ME" -- maim
+bindsym $mod+Shift+l exec i3lock-fancy -pt "DIT IS NIET JOUW COMPUTER VRIEND" -- maim
 #bindsym F10 exec i3lock-fancy -pt "HACK ME" -- maim
 # Lock on suspend
-exec --no-startup-id exec xss-lock -- i3lock-fancy -pt "HACK ME" -- maim
+exec --no-startup-id exec xss-lock -- i3lock-fancy -pt "DIT IS NIET JOUW COMPUTER VRIEND" -- maim
 
 # Gestures
 exec --no-startup-id exec systemctl --user start fusuma
