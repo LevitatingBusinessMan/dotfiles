@@ -1,8 +1,22 @@
 {
     "Alt-/": "lua:comment.comment",
-    "CtrlP": "command:vsplit",
-    "Ctrl-;": "command:hsplit",
+    "Alt-d": "command:definition",
+    "Alt-f": "command:format",
+    "Alt-k": "command:hover",
+    "Alt-r": "command:references",
+    "CtrlSpace": "command:lspcompletion",
     "CtrlUnderscore": "lua:comment.comment",
-    "Shift-PageUp": "SelectPageUp",
-    "Shift-PageDown": "SelectPageDown"
+    "CtrlTab": "InsertTab" ,
+    "AltTab": "InsertTab" ,
+    "Alt-Up": "CursorUp",
+    "AltDown": "CursorDown",
+    "AltLeft": "WordLeft",
+    "AltRight": "WordRight",
+    "CtrlLeft": "StartOfText",
+    "CtrlRight": "EndOfLine",
+    "CtrlUp": "MoveLinesUp",
+    "CtrlDown": "MoveLinesDown",
+    "AltShiftRight":  "SelectWordRight",
+    "AltShiftLeft":   "SelectWordLeft"
+    
 }

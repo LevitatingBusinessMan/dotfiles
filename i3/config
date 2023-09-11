@@ -158,6 +158,7 @@ bindsym Control+grave exec dunstctl history-pop
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+F1 exec alacritty
 #bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
@@ -195,18 +196,18 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+bindsym $mod+period split h;  exec --no-startup-id dunstify "horizontal" -h string:x-dunst-stack-tag:layout -t 500
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+comma split v;  exec --no-startup-id dunstify "vertical" -h string:x-dunst-stack-tag:layout -t 500
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed; exec --no-startup-id dunstify "tabbed" -h string:x-dunst-stack-tag:layout -t 500
+bindsym $mod+s layout stacking; exec --no-startup-id dunstify "stacking" -h string:x-dunst-stack-tag:layout -t 500
+bindsym $mod+e layout toggle split; exec --no-startup-id dunstify "toggle split" -h string:x-dunst-stack-tag:layout -t 500
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
