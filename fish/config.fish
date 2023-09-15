@@ -54,14 +54,13 @@ function fish_prompt --description 'Write out the prompt'
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
     set -l distro (brl which)
-    if test $distro = "s"
-    	set distro
+    if test $distro = s
+        set distro
     else
-    	set distro "($distro) "
+        set distro "($distro) "
     end
 
     echo -n -s (set_color cyan -o) $distro (set_color $fish_color_user -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
 end
 
 export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
-
