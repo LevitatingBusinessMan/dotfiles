@@ -21,17 +21,22 @@ bindsym $mod+g border none
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 
+bindsym F8 exec ~/scripts/wallpapercycle.sh > ~/.wallpaper
+
 # Lock
 bindsym $mod+Shift+l exec i3lock-fancy -pt "DIT IS NIET JOUW COMPUTER VRIEND" -- maim
 #bindsym F10 exec i3lock-fancy -pt "HACK ME" -- maim
 # Lock on suspend
 exec --no-startup-id exec xss-lock -- i3lock-fancy -pt "DIT IS NIET JOUW COMPUTER VRIEND" -- maim
 
+# Picom
+exec --no-startup-id exec systemctl --user start picom
+
 # Gestures
 exec --no-startup-id exec systemctl --user start fusuma
 
 # feh
-exec --no-startup-id feh --bg-tile Pictures/wallpapers/wallpaper.jpg
+exec --no-startup-id feh --bg-tile $(cat ~/.wallpaper)
 
 # polkit
 exec --no-startup-id strat arch /usr/lib/xfce-polkit/xfce-polkit
@@ -41,8 +46,8 @@ exec --no-startup-id systemctl --user start redshift
 bindsym F9 exec pkill -USR1 redshift
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -51,6 +56,8 @@ bindsym XF86MonBrightnessUp exec sudo /bedrock/cross/bin/light -A 10 && dunstify
 bindsym XF86MonBrightnessDown exec sudo /bedrock/cross/bin/light -U 10 && dunstify Light `light` -t 1000 -h string:x-dunst-stack-tag:light
 
 #bindsym $mod+h workspace hidden
+
+for_window [title="QEMU*"] floating enable
 
 # Special notepad :)
 for_window [title="notepad"] floating enable, sticky enable, resize set 500 400, title_format "Sticky | %title" 

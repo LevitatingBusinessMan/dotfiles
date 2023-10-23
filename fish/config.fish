@@ -1,9 +1,15 @@
+bundle config set --local path '/home/rein/.gem'
+
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     source ~/.bash_aliases
 
     # Some git utility functions for the prompt
     source $__fish_config_dir/git-util.fish
+
+    abbr gs git status
+    abbr stl "sudo systemctl"
 
     # Disable fish greeting
     set fish_greeting
@@ -60,7 +66,13 @@ function fish_prompt --description 'Write out the prompt'
         set distro "($distro) "
     end
 
-    echo -n -s (set_color cyan -o) $distro (set_color $fish_color_user -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " "(set_color $color_suffix -o)$suffix " "
+    set -l vf ""
+    # if test -n $VIRTUAL_ENV
+    #     echo $VIRTUAL_ENV
+    #     set -l vf (basename $VIRTUALENV)
+    # end
+
+    echo -n -s (set_color cyan -o) $distro (set_color $fish_color_user -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal $vf " "(set_color $color_suffix -o)$suffix " "
 end
 
 export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"

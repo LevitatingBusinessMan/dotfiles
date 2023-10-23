@@ -1,0 +1,8 @@
+[Unit]
+Description=Start picom
+
+[Service]
+ExecStart=/usr/bin/picom
+
+[Install]
+WantedBy=default.target

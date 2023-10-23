@@ -1,4 +1,5 @@
-#!/bin/bash
-file=`ls -t ~/wallpapercycle | tail -n1`
+#!/bin/sh
+file=`ls -dt ~/wallpapercycle/* | tail -n1`
 touch $file
-feh 
+echo $file
+feh --bg-tile $file

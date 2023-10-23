@@ -1,0 +1,4 @@
+function pac_size --wraps=sh\ -c\ \'expac\ -H\ M\ \"\%011m\\t\%-20n\\t\%10d\"\ \$\(comm\ -23\ \<\(pacman\ -Qqen\ \|\ sort\)\ \<\(\{\ pacman\ -Qqg\ xorg\;\ expac\ -l\ \'\\n\'\ \'\%E\'\ base\;\ \}\ \|\ sort\ -u\)\)\ \|\ sort\ -n\' --wraps=bash\ -c\ \'expac\ -H\ M\ \"\%011m\\t\%-20n\\t\%10d\"\ \$\(comm\ -23\ \<\(pacman\ -Qqen\ \|\ sort\)\ \<\(\{\ pacman\ -Qqg\ xorg\;\ expac\ -l\ \'\\n\'\ \'\%E\'\ base\;\ \}\ \|\ sort\ -u\)\)\ \|\ sort\ -n\' --description alias\ pac_size=bash\ -c\ \'expac\ -H\ M\ \"\%011m\\t\%-20n\\t\%10d\"\ \$\(comm\ -23\ \<\(pacman\ -Qqen\ \|\ sort\)\ \<\(\{\ pacman\ -Qqg\ xorg\;\ expac\ -l\ \'\\n\'\ \'\%E\'\ base\;\ \}\ \|\ sort\ -u\)\)\ \|\ sort\ -n\'
+  bash -c 'expac -H M "%011m\t%-20n\t%10d" $(comm -23 <(pacman -Qqen | sort) <({ pacman -Qqg xorg; expac -l '\n' '%E' base; } | sort -u)) | sort -n' $argv
+        
+end
