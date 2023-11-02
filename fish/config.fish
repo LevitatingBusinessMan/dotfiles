@@ -5,8 +5,17 @@ if status is-interactive
     # Some git utility functions for the prompt
     source $__fish_config_dir/git-util.fish
 
+    abbr gs git status
+    abbr stl sudo systemctl
+
     # Disable fish greeting
     set fish_greeting
+end
+
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        #exec startx -- -keeptty
+    end
 end
 
 function fish_prompt --description 'Write out the prompt'

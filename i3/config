@@ -31,6 +31,8 @@ bindsym $mod+h sticky disable, title_format "%title"
 #client.urgent           #fff #fff #fff #fff #fff
 #client.placeholder      #fff #fff #fff #fff #fff
 
+for_window [title="ModOrganizer"] floating enable
+
 # Special notepad :)
 for_window [title="notepad"] floating enable
 for_window [title="notepad"] border normal

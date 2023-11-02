@@ -1,0 +1,13 @@
+diff --git a/PKGBUILD b/PKGBUILD
+index 643a92f..b7b5e7e 100644
+--- a/PKGBUILD
++++ b/PKGBUILD
+@@ -16,7 +16,7 @@ optdepends=(
+ 	'vim: for vimdiff'
+ 	'colordiff: for colored diff output'
+ )
+-source=(git+https://github.com/ava1ar/customizepkg.git) 
++source=(git+https://github.com/LevitatingBusinessMan/customizepkg.git) 
+ sha1sums=('SKIP')
+ 
+ pkgver() {

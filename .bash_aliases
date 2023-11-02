@@ -49,9 +49,9 @@ alias srcinfo="makepkg --printsrcinfo > .SRCINFO"
 
 #alias yay="yay --removemake"
 
-alias make="make -j3"
+#alias make="make -j3"
 
-alias my_ip="curl https://api.ipify.org"
+#alias my_ip="curl https://api.ipify.org"
 
 alias proxy_tor="proxychains -q -f /etc/proxychains_tor.conf"
 

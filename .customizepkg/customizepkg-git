@@ -1,1 +1,3 @@
-patch#pkgbuild#patch_absolute_path_branch.patch
+#patch#1#multiple_checksums.patch
+#patch#1#patch-path.patch
+patch#pkgbuild#fork.patch

@@ -1,0 +1,32 @@
+diff --git a/customizepkg b/customizepkg
+index 3c4fcc8..a1522c8 100755
+--- a/customizepkg
++++ b/customizepkg
+@@ -186,10 +186,11 @@ do
+ 	#adding new files current dir from  ${CFGDIR}/${package} folder and including them to PKGBUILD
+ 	if [ -d  "${CONFIGDIR}/${package}.files" ]; then
+ 		# find checksum type used in PKGBUILD and utility to calculate the sum for added files
+-		checksum_contexts=$(grep -o "^[a-z]*[0-9]*sums" "./PKGBUILD")
+-		if [ -z "${checksum_contexts}" ]; then
+-			checksum_contexts="sha256sums";
++		checksum_context=$(grep -om 1 "^[a-z]*[0-9]*sums" "./PKGBUILD")
++		if [ -z "${checksum_context}" ]; then
++			checksum_context="sha256sums";
+ 		fi
++		checksum_utility=${checksum_context%?}
+ 		echo "=> files from ${CONFIGDIR}/${package}.files will be included into package "
+ 		for filepath in ${CONFIGDIR}/${package}.files/*; do
+ 			if [[ -f ${filepath} ]]; then
+@@ -199,11 +200,7 @@ do
+ 				if [[ $? -eq 0 ]];
+ 					then
+ 						echo "add#source#${filename}" >> ./${package}.customize
+-						for checksum_context in $checksum_contexts
+-						do
+-							checksum_utility=${checksum_context%?}
+-							echo "add#${checksum_context}#$(${checksum_utility} < ./${filename} | cut -d" " -f1)" >> ./${package}.customize
+-						done
++						echo "add#${checksum_context}#$(${checksum_utility} < ./${filename} | cut -d" " -f1)" >> ./${package}.customize
+ 						echo 'included'
+ 					else
+ 						echo 'already exists. Skipping...'
