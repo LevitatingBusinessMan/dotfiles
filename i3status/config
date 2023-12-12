@@ -7,7 +7,6 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-
         colors = true
         interval = 5
 }
@@ -49,7 +48,7 @@ load {
 memory {
         format = "RAM %used"
         threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+        format_degraded = "RAM < %available"
 }
 
 tztime local {

@@ -11,6 +11,10 @@
 
 set $mod Mod4
 
+# include colors
+
+bindsym $mod+F1 exec pactl list short sinks | cut -f2 | dmenu | xargs pactl set-default-sink
+
 # make sticky
 bindsym $mod+y sticky enable, title_format "Sticky | %title"
 bindsym $mod+h sticky disable, title_format "%title"
@@ -21,7 +25,7 @@ bindsym $mod+g border none
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 
-bindsym F8 exec ~/scripts/wallpapercycle.sh > ~/.wallpaper
+bindsym F8 exec --no-startup-id ~/scripts/wallpapercycle.fish > ~/.wallpaper
 
 # Lock
 bindsym $mod+Shift+l exec i3lock-fancy -pt "DIT IS NIET JOUW COMPUTER VRIEND" -- maim
@@ -101,7 +105,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+F1 exec alacritty
+# bindsym $mod+F1 exec alacritty
 bindsym $mod+Return exec alacritty
 
 # kill focused window
