@@ -4,14 +4,13 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
 # i3 config file (v4)
 #
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# Please see https://i3wm.org/docs/userguide.html for a complete refere
 
 set $mod Mod4
 
-# include colors
+bindsym $mod+o exec fish ~/scripts/code.fish
 
 bindsym $mod+F1 exec pactl list short sinks | cut -f2 | dmenu | xargs pactl set-default-sink
 

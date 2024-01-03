@@ -1,5 +1,4 @@
-bundle config set --local path '/home/rein/.gem'
-
+# bundle config set --local path '/home/rein/.gem'
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -72,7 +71,12 @@ function fish_prompt --description 'Write out the prompt'
     #     set -l vf (basename $VIRTUALENV)
     # end
 
-    echo -n -s (set_color cyan -o) $distro (set_color $fish_color_user -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal $vf " "(set_color $color_suffix -o)$suffix " "
+    set -l venv ""
+    if test  $VIRTUAL_ENV
+        set venv (set_color grey) "(" (basename $VIRTUAL_ENV) ")"
+    end
+
+    echo -n -s (set_color cyan -o) $distro (set_color $fish_color_user -o)$USER' ' $normal (set_color $color_cwd) (prompt_pwd) $normal $repo_info $normal " " $venv " "(set_color $color_suffix -o)$suffix " "
 end
 
-export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:/home/rein/.gem/ruby/3.0.0/bin:$PATH"
